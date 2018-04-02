@@ -9,6 +9,8 @@ let weather = [];
 let weatherSearch = [];
 let id = 0;
 
+let weatherData = [];
+
 
 module.exports = {
 
@@ -104,7 +106,16 @@ module.exports = {
         weather.splice(newIndex, 0, weather.splice(oldIndex, 1)[0]);
     
         res.status(200).send(weather);
-    }
+    },
 
+
+
+
+    readWeatherData : (req, res) => {
+        axios.get(`${BASE_URL}/forecast?zip=${req.params.zip}&mode=JSON&units=imperial&APPID=${API_KEY}`).then((result) => {
+            weatherData = result.data;
+            res.status(200).send(weatherData);
+        }).catch((e) => console.log(e));
+    }
 
 }

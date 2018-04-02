@@ -21,7 +21,7 @@ app.delete('/api/weather/:id', cont.delete)
 // Endpoints - External API
 app.get('/api/database/:zip', cont.readWeather)
 app.get('/api/geo/:lat/:lon', cont.readWeatherGeo)
-
+app.get('/api/forecast/:zip', cont.readWeatherData)
 
 app.listen(port, ()=> {
     console.log(`Creepin on Port: ${port}`);

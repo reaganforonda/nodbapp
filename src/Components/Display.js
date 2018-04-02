@@ -21,7 +21,8 @@ export default class Display extends Component {
       date: "",
       wind: [],
       show: false,
-      trackedWeather: []
+      trackedWeather: [],
+      forecast: []
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -58,6 +59,9 @@ export default class Display extends Component {
           wind: temp2
         });
       });
+      axios.get(`http://localhost:3002/api/forecast/${encodeURI(this.state.location)}`).then(result=> {
+        this.setState({forecast : result.data});
+      })
   }
 
   handleOnClick() {
@@ -131,6 +135,7 @@ export default class Display extends Component {
               weather={this.state.weather}
             />
           )}
+
         </div>
         <div>
           {this.state.show && (<div><Button onclick={this.addToTracking} cssClass={'track-button'} title={'TRACK'}></Button></div>)}
