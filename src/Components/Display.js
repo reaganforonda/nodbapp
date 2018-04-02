@@ -117,6 +117,7 @@ export default class Display extends Component {
         <div className="search-section">
           <input
             className="search-input"
+            value = {this.state.location}
             placeholder="Enter Zip Code"
             onChange={e => this.handleInputChange(e)}
           />
