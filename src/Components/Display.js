@@ -122,7 +122,7 @@ export default class Display extends Component {
             <p>{this.converUTC(val.date)}</p>
             <Icon icon={val.icon}/>
             <p className='weather-description'>{val.description}</p>
-            <p>{`Temperature: ${val.temp}`}</p>
+            <p>{`Temperature: ${val.temp}` } &#8457;</p>
             <div className="weather-item-buttons">
               <button className='Weather-item-button' onClick={() => this.deleteFromList(val.id)}>
                 Remove

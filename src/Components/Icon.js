@@ -57,6 +57,9 @@ function Icon(props){
       case '50n':
       url = 'http://openweathermap.org/img/w/50n.png'
       break;
+      default: 
+      break;
+      
     }
 
     return (
