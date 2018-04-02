@@ -33,7 +33,6 @@ function Weather(props) {
           <div key={val+i}>
           <p className='descrip'>{val.description}</p>
           <Icon icon={val.icon}/>
-          {/* ÷<img src={getWeatherIcon(val.icon)} alt='weather-icon'/> */}
           </div>
       );
   });

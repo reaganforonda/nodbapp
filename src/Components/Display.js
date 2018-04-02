@@ -5,6 +5,7 @@ import "./CSS/display.css";
 import Weather from "./Weather";
 
 import Tracked from './Tracked';
+import Button from './Button';
 
 export default class Display extends Component {
   constructor() {
@@ -121,9 +122,7 @@ export default class Display extends Component {
             placeholder="Enter Zip Code"
             onChange={e => this.handleInputChange(e)}
           />
-          <button className="search-button" onClick={this.handleOnClick}>
-            SEARCH
-          </button>
+          <div><Button cssClass={'search-button'} onclick={this.handleOnClick} title={'SEARCH'}/></div>
         </div>
 
         <div className="current-temp">
@@ -138,11 +137,7 @@ export default class Display extends Component {
           )}
         </div>
         <div>
-          {this.state.show && (
-            <button className="track-button" onClick={this.addToTracking}>
-              TRACK
-            </button>
-          )}
+          {this.state.show && (<div><Button onclick={this.addToTracking} cssClass={'track-button'} title={'TRACK'}></Button></div>)}
         </div>
         <div className="tracking-list-items">
           <Tracked tracked={this.state.trackedWeather} delete={this.deleteFromList} move={this.moveListAround} convert={this.converUTC}/>
