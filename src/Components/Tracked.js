@@ -1,6 +1,6 @@
 import React from "react";
 import Icon from "./Icon";
-import Button from './Button';
+import Button from "./Button";
 
 function Tracked(props) {
   let tracked = props.tracked.map((val, index) => {
@@ -13,13 +13,15 @@ function Tracked(props) {
           <p className="weather-description">{val.description}</p>
           <p>{`Temperature: ${val.temp}`} &#8457;</p>
           <div className="weather-item-buttons">
+
+            {/* REfractored */}
             <button
               className="Weather-item-button"
               onClick={() => props.delete(val.id)}
             >
               Remove
             </button>
-          
+
             <button
               className="Weather-item-button"
               onClick={() => props.move(val.id, "up")}
@@ -27,6 +29,7 @@ function Tracked(props) {
               Move Up
             </button>
 
+                  
             <button
               className="Weather-item-button"
               onClick={() => props.move(val.id, "down")}
@@ -34,6 +37,21 @@ function Tracked(props) {
               Move Down
             </button>
 
+            {/* <Button
+              cssClass={"Weather-item-button"}
+              onclick={() => props.delete(val.id)}
+              title={"Remove-test"}
+            />
+            <Button
+              cssClass={"Weather-item-button"}
+              onclick={() => props.move(val.id, "up")}
+              title={"Move up-test"}
+            />
+            {/* <Button
+              cssClass={"Weather-item-button"}
+              onclick={() => props.move(val.id, "down")}
+              title={"Move Down-test"}
+            /> */}
           </div>
         </div>
       </div>

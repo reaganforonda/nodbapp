@@ -96,10 +96,7 @@ module.exports = {
         }
     
         if(newIndex >= weather.length){
-            let k = newIndex - weather.length + 1;
-            while(k--){
-                weather.push(undefined);
-            }
+            newIndex = newIndex - weather.length;
         }
 
         weather.splice(newIndex, 0, weather.splice(oldIndex, 1)[0]);
