@@ -73,16 +73,17 @@ module.exports = {
         // Find Index of Weather Object that you want to move
         weather.forEach((obj, index) => {
             if(obj.id === Number(req.params.id)){
-                oldIndex === index;
+                oldIndex = index;
             }
         })
 
-        console.log(oldIndex);
+        
 
         // If you're moving item up the list, subtract from old index
         // If you'r moving down the list, add to the old index
         if(req.params.move === 'up'){
             newIndex = oldIndex-1;
+            
         } else if(req.params.move === 'down'){
             newIndex = oldIndex + 1;
         }
@@ -95,7 +96,7 @@ module.exports = {
         }
     
         if(newIndex >= weather.length){
-            let k = newIndex - weather.length +1;
+            let k = newIndex - weather.length + 1;
             while(k--){
                 weather.push(undefined);
             }

@@ -1,5 +1,6 @@
 import React from "react";
 import Icon from "./Icon";
+import Button from './Button';
 
 function Tracked(props) {
   let tracked = props.tracked.map((val, index) => {
@@ -18,18 +19,21 @@ function Tracked(props) {
             >
               Remove
             </button>
+          
             <button
               className="Weather-item-button"
               onClick={() => props.move(val.id, "up")}
             >
               Move Up
             </button>
+
             <button
               className="Weather-item-button"
-              onClick={() => props.move(val.id, "up")}
+              onClick={() => props.move(val.id, "down")}
             >
               Move Down
             </button>
+
           </div>
         </div>
       </div>
