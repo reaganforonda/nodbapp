@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans');
+
+.header {
+    background: url('./vincent-guth-183404-unsplash.jpg') center no-repeat;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.header h1{
+    color: white;
+    letter-spacing: 8px;
+    border: white 6px solid;
+    padding: 20px;
+    font-size: 50px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bold;
+    display: block;
+}
+
+.sun{
+    color: rgb(235, 238, 19, .8);
+}
+
+.geo{
+    position: absolute;
+    left: 43%;
+    top: 80%;
+    font-size: 20px;
+    color: white;
+    font-family: 'IBM Plex Sans', sans-serif;   
+}
+
+.header-temp-loc {
+    display: inline-block;  
+}

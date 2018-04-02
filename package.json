@@ -1,0 +1,31 @@
+{
+  "name": "weather",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "ajv": "^6.4.0",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "bulma": "^0.6.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "proxy": "http://localhost:3002",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "react-fontawesome": "^1.6.1",
+    "react-materialize": "^2.1.2",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "./server/index.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "Reagan Foronda",
+  "license": "ISC"
+}

@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans");
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  /* background: linear-gradient(to bottom, #000000 27%, #ffffff 100%); */
+  background: black;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100px;
+  height: 30px;
+  margin-right: 10px;
+  border: rgb(36, 78, 93) 3px solid;
+}
+
+.search-button {
+  height: 30px;
+  border: rgb(36, 78, 93) 3px solid;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.search-button:hover {
+  background: black;
+  color: white;
+}
+
+.track-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+  width: 80px;
+  border: 2px solid black;
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-family: "IBM Plex Sans", sans-serif;
+  box-shadow: 2px 2px black;
+}
+.track-button:hover {
+  background: black;
+  color: white;
+  box-shadow: 2px 2px yellow;
+}
+
+.current-temp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-item-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 20px;
+  height: 10vh;
+}
+
+.weather-item-info p {
+  margin: 20px;
+  text-align: center;
+}
+
+.tracking-list-items {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.weather-tracked {
+  border: solid black white;
+  box-shadow: 0 8px 16px 0 rgba(81, 160, 127, 0.2);
+  width: 100vw;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background: black;
+  text-align: center;
+}
+
+.weather-description{
+  text-transform: capitalize;
+}

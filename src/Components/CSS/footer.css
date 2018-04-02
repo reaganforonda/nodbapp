@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans");
+
+footer {
+  background: black;
+  width: 100%;
+  color: white;
+  font-family: "IBM Plex Sans", sans-serif;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-section h3 {
+  font-size: 30px;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.contact-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-icon {
+  margin-right: 10px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  border: 2px solid rgb(81, 160, 127);;
+  color: rgb(81, 160, 127);
+  background: black;
+}
+
+.social-button:hover{
+    cursor: pointer;
+    background: rgb(81, 160, 127);
+    color: white;
+    border: white solid 1px
+}
+
+.copyr { 
+    margin-top: 20px;
+    font-size: 10px;
+}
+
+.standard-link:link{
+    color: rgb(81, 160, 127);
+}
+
+.standard-link:visited{
+    color: #105D5C;
+}
