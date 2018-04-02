@@ -9,6 +9,7 @@
     "bulma": "^0.6.2",
     "cors": "^2.8.4",
     "express": "^4.16.3",
+    "material-ui": "^0.20.0",
     "proxy": "http://localhost:3002",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",

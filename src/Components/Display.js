@@ -6,6 +6,7 @@ import Weather from "./Weather";
 
 import Tracked from './Tracked';
 import Button from './Button';
+import Input from './Input';
 
 export default class Display extends Component {
   constructor() {
@@ -116,12 +117,7 @@ export default class Display extends Component {
     return (
       <div>
         <div className="search-section">
-          <input
-            className="search-input"
-            value = {this.state.location}
-            placeholder="Enter Zip Code"
-            onChange={e => this.handleInputChange(e)}
-          />
+          <Input cssClass={'search-input'} value={this.state.location} placeholder={'Enter Zip Code'} onchange={e=> this.handleInputChange(e)}/>
           <div><Button cssClass={'search-button'} onclick={this.handleOnClick} title={'SEARCH'}/></div>
         </div>
 
