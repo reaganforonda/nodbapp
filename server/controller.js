@@ -27,8 +27,6 @@ module.exports = {
     readWeatherGeo: (req, res) => {
         let lat = parseFloat(req.params.lat);
         let lon = parseFloat(req.params.lon);
-        console.log(lat);
-        console.log(lon);
 
         axios.get(`${BASE_URL}/weather/?lat=${lat}&lon=${lon}&mode=JSON&units=imperial&APPID=${API_KEY}`).then((result) => {
             weatherSearch = result.data;
