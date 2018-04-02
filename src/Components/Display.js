@@ -3,7 +3,6 @@ import axios from "axios";
 import "./CSS/reset.css";
 import "./CSS/display.css";
 import Weather from "./Weather";
-import Icon from './Icon';
 
 import Tracked from './Tracked';
 
@@ -57,8 +56,6 @@ export default class Display extends Component {
           wind: temp2
         });
       });
-
-      console.log(this.state.location);
   }
 
   handleOnClick() {
@@ -115,32 +112,6 @@ export default class Display extends Component {
   }
 
   render() {
-    // Render List of places you are tracking
-    let track = this.state.trackedWeather.map(val => {
-      return (
-        <div key={val.id} className='weather-tracked'>
-          <div className="weather-item-info">
-            <p>{val.currentLocation}</p>
-            <p>{this.converUTC(val.date)}</p>
-            <Icon icon={val.icon}/>
-            <p className='weather-description'>{val.description}</p>
-            <p>{`Temperature: ${val.temp}` } &#8457;</p>
-            <div className="weather-item-buttons">
-              <button className='Weather-item-button' onClick={() => this.deleteFromList(val.id)}>
-                Remove
-              </button>
-              <button className='Weather-item-button' onClick={() => this.moveListAround(val.id, "up")}>
-                Move Up
-              </button>
-              <button className='Weather-item-button' onClick={() => this.moveListAround(val.id, "up")}>
-                Move Down
-              </button>
-            </div>
-          </div>
-        </div>
-      );
-    });
-
     return (
       <div>
         <div className="search-section">
@@ -173,7 +144,6 @@ export default class Display extends Component {
           )}
         </div>
         <div className="tracking-list-items">
-          {/* <div>{track}</div> */} {/*Refractored*/}
           <Tracked tracked={this.state.trackedWeather} delete={this.deleteFromList} move={this.moveListAround} convert={this.converUTC}/>
         </div>
       </div>
