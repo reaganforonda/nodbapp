@@ -5,6 +5,8 @@ import "./CSS/display.css";
 import Weather from "./Weather";
 import Icon from './Icon';
 
+import Tracked from './Tracked';
+
 export default class Display extends Component {
   constructor() {
     super();
@@ -171,7 +173,8 @@ export default class Display extends Component {
           )}
         </div>
         <div className="tracking-list-items">
-          <div>{track}</div>
+          {/* <div>{track}</div> */} {/*Refractored*/}
+          <Tracked tracked={this.state.trackedWeather} delete={this.deleteFromList} move={this.moveListAround} convert={this.converUTC}/>
         </div>
       </div>
     );
