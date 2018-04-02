@@ -4,6 +4,8 @@ import "./CSS/weather.css";
 import Icon from './Icon';
 
 function Weather(props) {
+
+  // Convert UTC code to a String - UTC is based on client side Time
   let seconds = props.date;
   let date = new Date(seconds * 1000);
   let dateString = date.toLocaleDateString();

@@ -66,6 +66,7 @@ module.exports = {
         res.status(200).send(weather);
     },
 
+
     update: (req, res) => {
         let oldIndex = 0;
         let newIndex = 0;
@@ -79,8 +80,8 @@ module.exports = {
 
         
 
-        // If you're moving item up the list, subtract from old index
-        // If you'r moving down the list, add to the old index
+        // Moving 'up' = Moving to the front of the array
+        // Moving 'down' = Moving to the back of the array
         if(req.params.move === 'up'){
             newIndex = oldIndex-1;
             
@@ -95,6 +96,9 @@ module.exports = {
             newIndex += weather.length;
         }
     
+        // If you're moving the last item in the weather array down, it will cause an error
+        // To compenseate, return the last item to the front of the array by subtracting the length of the array
+        // From the new index = this will insure that the last item will move to the front of the list;
         if(newIndex >= weather.length){
             newIndex = newIndex - weather.length;
         }

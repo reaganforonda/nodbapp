@@ -1,5 +1,7 @@
 import React from 'react';
 
+//  Function to return the url of the appropriate icon
+
 function Icon(props){
     let url = '';
     switch (props.icon) {

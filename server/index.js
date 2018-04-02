@@ -11,12 +11,14 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-// Endpoints
+// Endpoints-Internal Server
 app.get('/api/weather', cont.read)
 app.post('/api/weather', cont.add)
 app.put('/api/weather/:id/:move', cont.update)
 app.delete('/api/weather/:id', cont.delete)
 
+
+// Endpoints - External API
 app.get('/api/database/:zip', cont.readWeather)
 app.get('/api/geo/:lat/:lon', cont.readWeatherGeo)
 
